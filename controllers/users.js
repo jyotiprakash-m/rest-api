@@ -14,7 +14,7 @@ export const createUser = (req, res) => {
 
 export const findUser = (req, res) => {
     const user = users.find((user) => user.id === req.params.id)
-    res.status(200).send(user);
+    res.status(200).send(user.name);
 }
 
 export const updateUser = (req, res) => {
