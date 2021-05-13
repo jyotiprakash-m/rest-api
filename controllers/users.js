@@ -13,7 +13,8 @@ export const createUser = (req, res) => {
 }
 
 export const findUser = (req, res) => {
-    res.status(200).send(req.params.id);
+    const user = users.find((user) => user.id === req.params.id)
+    res.status(200).send(user);
 }
 
 export const updateUser = (req, res) => {
